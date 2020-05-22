@@ -7,8 +7,8 @@
 /// 인라인 어셈블리 콜을 하고 있는걸 확인할 수 있었다.
 /// 
 /// [구현]: https://doc.rust-lang.org/beta/src/core/hint.rs.html#109-119
-#![feature(test)]
-extern crate test;
+// #![feature(test)]
+// extern crate test;
 
 use std::io;
 
@@ -31,7 +31,7 @@ fn main() {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use test::Bencher;
+    // use test::Bencher;
 
     #[test]
     fn test() {
@@ -40,11 +40,11 @@ mod tests {
         assert_eq!(min(10), 3);
     }
 
-    #[bench]
-    fn bench_recursive(b: &mut Bencher) {
-        b.iter(|| {
-            let n = test::black_box(1_000_000);
-            min(n)
-        });
-    }
+    // #[bench]
+    // fn bench_recursive(b: &mut Bencher) {
+    //     b.iter(|| {
+    //         let n = test::black_box(1_000_000);
+    //         min(n)
+    //     });
+    // }
 }

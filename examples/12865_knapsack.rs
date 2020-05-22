@@ -11,13 +11,11 @@ fn parse(s: &str) -> (usize, usize, Vec<(usize, usize)>) {
         n,
         k,
         s.map(|l| {
-            ({
-                let mut l = l.split_whitespace();
-                (
-                    l.next().unwrap().parse().unwrap(),
-                    l.next().unwrap().parse().unwrap(),
-                )
-            })
+            let mut l = l.split_whitespace();
+            (
+                l.next().unwrap().parse().unwrap(),
+                l.next().unwrap().parse().unwrap(),
+            )
         })
         .collect(),
     )

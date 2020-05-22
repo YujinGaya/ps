@@ -89,7 +89,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             }
         }
 
-        println!("{:?}", blubs.0[9]);
+        println!("{:?}", bulbs.0[9]);
 
         if bulbs.0[9].iter().all(|b| !b) {
             println!(
